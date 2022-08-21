@@ -1,0 +1,61 @@
+:root{
+    --nav-title-font-size: 3rem;
+    --nav-title-font-weight: normal;
+    --nav-link-font-weight: 300;
+}
+
+.header-title{
+    font-family: 'Silkscreen';
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: var(--nav-title-font-size);
+    font-weight: var(--nav-title-font-weight);
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+}  
+
+.header-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.header-nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li{
+    list-style: none;
+}
+
+.header-nav li a{
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: var(--nav-title-font-weight);
+    padding: 1rem;
+}
+
+.header-nav li a:hover, .header-title:hover{
+    color: white;
+}
+
+.header-title:hover span{
+    position:relative;
+    display: inline-block;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+
+@keyframes waviy {
+    0%, 40%, 100%{
+        transform: translateY(0);
+    }
+
+    20%{
+        transform: translateY(-20px);
+    }
+}

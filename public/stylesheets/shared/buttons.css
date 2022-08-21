@@ -1,0 +1,88 @@
+:root{
+    --color-btn-border: black;
+    --color-btn-primary-text: hsl(var(--color-base-hue), 100%, 20%);
+    --color-btn-primary-text-dark: hsl(var(--color-base-hue), 100%, 10%);
+    --color-btn-primary-background: hsl(var(--color-base-hue), 100%, 90%);
+    --color-btn-primary-background-dark: hsl(var(--color-base-hue), 100%, 80%);
+
+    --color-btn-danger-text: black;
+    --color-btn-danger-text-dark: black;
+    --color-btn-danger-background: hsl(var(--color-danger-hue), 100%, 90%);
+    --color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 80%);
+
+    
+}
+
+/* .btn{
+    border: 1px solid var(--color-btn-border);
+    border-radius: .5rem;
+    padding: .5rem .7rem;
+    font-size: 1.1rem;
+    font-family: 'Chakra Petch';
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+} */
+
+.btn{
+    border: 2px solid var(--color-btn-border);
+    border-radius: 30px;
+    box-shadow: var(--color-btn-border) 4px 4px 0 0;
+    color: var(--color-btn-border);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Chakra Petch';
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+}
+
+.btn:active{
+    box-shadow: var(--color-btn-border) 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+.btn-row{
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn-row >*{
+    margin-right: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.btn-primary {
+    color: var(--color-btn-primary-text);
+    background-color: var(--color-btn-primary-background);
+}
+
+.btn-primary:hover {
+    color: var(--color-btn-primary-text-dark);
+    background-color: var(--color-btn-primary-background-dark);
+}
+
+.btn-danger {
+    color: var(--color-btn-danger-text);
+    background-color: var(--color-btn-danger-background);
+}
+
+.btn-danger:hover {
+    color: var(--color-btn-danger-text-dark);
+    background-color: var(--color-btn-danger-background-dark);
+}
+
+@media (min-width: 768px) {
+    .btn{
+        min-width: 120px;
+        padding: 0 25px;
+    }
+}

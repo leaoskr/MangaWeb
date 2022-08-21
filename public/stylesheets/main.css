@@ -1,0 +1,69 @@
+@import 'shared/variables.css';
+@import 'shared/fonts.css';
+@import 'shared/header.css';
+@import 'shared/buttons.css';
+@import 'shared/form.css';
+@import 'shared/author.css';
+@import 'shared/book.css';
+
+:root{
+    font-family: 'Chakra Petch';
+    font-size: 20px;
+    color: var(--color-text-light);
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, var(--color-background-dark), var(--color-background-light));
+}
+
+.container{
+    max-width: 1200px;
+    margin:auto;
+    margin-bottom: 3rem;
+}
+
+.inner-container{
+    margin:0 2rem;
+
+}
+
+.page-header{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.footer-container{
+    margin:10rem 2rem 0 2rem;
+    text-align: center;
+    font-size: .5rem;
+}
+
+/* .footer-container h2{
+    font-family: 'Silkscreen';
+    font-size: 1rem;
+    font-weight: normal;
+} */
+
+.footer-fliptext span{
+    font-family: 'Silkscreen';
+    font-size: 1rem;
+    font-weight: normal;
+    position: relative;
+    display: inline-block;
+    animation: flip 3s infinite;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.error-message{
+    color: hsl(var(--color-base-hue), 90%, 19%);
+}
+
+@keyframes flip {
+    0%,80%{
+        transform: rotateY(360deg);
+    }
+}
